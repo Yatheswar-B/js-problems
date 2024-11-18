@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Returning Strings
+// JavaScript:
+function greet(name){
+  return `Hello, ${name} how are you doing today?`
+}
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// List Filtering
+// JavaScript:
+function filter_list(l) {
+  let a=[];
+  for(let i=0;i<l.length;i++){
+    if(typeof l[i]==='number'){
+      a.push(l[i]);
+    }
+  }
+  return a
+}
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// Disemvowel Trolls
+// JavaScript:
+function disemvowel(str) {
+  return str.replace(/[aeiouAEIOU]/g, "");
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// Calculate BMI
+// JavaScript:
+function bmi(weight, height) {
+  let bmi=weight/Math.pow(height,2);
+  if(bmi<=18.5){
+    return "Underweight"
+  }
+  else{
+    if(bmi<=25.0){
+      return "Normal"
+    }
+    else{
+      if(bmi<=30.0){
+        return "Overweight"
+      }
+      else{
+        if(bmi>30){
+          return "Obese"
+        }
+      }
+    }
+  }
+}
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// Printer Errors
+// JavaScript:
+function printerError(s) {
+  let count=0;
+    for(let i=0;i<s.length;i++){
+      if(s[i].charCodeAt(0) >'m'.charCodeAt(0)){
+         count++;
+      }
+      
+    }
+  return `${count}/${s.length}`
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// Count by X
+// JavaScript:
+function countBy(x, n) {
+  let z = [];
+   for(let i=1;i<=n;i++){
+     z.push(x*i);
+   }
+  return z;
+}
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// Square Every Digit
+// JavaScript:
+function squareDigits(num){
+  return Number(num.toString().split("").map((digit)=>{return Math.pow(Number(digit),2)}).join(''));
+}
+5 days agoRefactorDiscuss
+function squareDigits(num){
+  return Number(
+    num
+      .toString() 
+      .split('') 
+      .map(digit => Math.pow(Number(digit), 2)) 
+      .join('')   
+  );
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// Calculate average
+// JavaScript:
+function findAverage(array) {
+  if(array.length!=0){
+    let sum= array.reduce((accumulator,value)=>{
+       return accumulator+value;
+     },0)
+    let avg=sum/array.length;
+    return avg
+  }
+  else{
+    return 0;
+  }
+}
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// Ones and Zeros
+// JavaScript:
+const binaryArrayToNumber = arr => {
+  let squre=arr.length-1;
+  let sum=0;
+  for(let i=0;i<arr.length;i++){
+    sum+=arr[i]*Math.pow(2,squre);
+    squre--;
+  }
+   return sum
+};
+// 5 days agoRefactorDiscuss
+// 7 kyu
+// Is this a triangle?
+// JavaScript:
+function isTriangle(a,b,c)
+{
+  if(a+b>c&&a+c>b&&b+c>a){
+    return true;
+  }
+  else{
+   return false;
+    }
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// How good are you really?
+// JavaScript:
+function betterThanAverage(classPoints, yourPoints) {
+    
+  let sum=classPoints.reduce((accumulator,value)=>{
+    return accumulator + value;
+  })
+  
+  let avg=sum/classPoints.length;
+  if(yourPoints>avg){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// Convert a String to a Number!
+// JavaScript:
+const stringToNumber = function(str){
+  
+  return parseInt(str);
+}
+// 5 days agoRefactorDiscuss
+// 8 kyu
+// Cat years, Dog years
+// JavaScript:
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let a=[]
+  if(humanYears==1){
+    a.push(humanYears);
+    a.push(15);
+    a.push(15);
+  }
+  else{
+    if(humanYears==2){
+    a.push(humanYears);
+    a.push(15+9);
+    a.push(15+9);
+  }
+    else{
+       if(humanYears>2){
+    a.push(humanYears);
+    a.push((15+9)+((humanYears-2)*4));
+    a.push((15+9)+((humanYears-2)*5));
+  }
+    }
+  }
+  return a;
+}
+// 6 days agoRefactorDiscuss
+// 8 kyu
+// Is he gonna survive?
+// JavaScript:
+function hero(bullets, dragons){
+   if(bullets/2 == dragons || bullets/2 >dragons){
+     return true;
+   }
+  else{
+    return false;
+  }
+}
+// 6 days agoRefactorDiscuss
+// 8 kyu
+// Rock Paper Scissors!
+// JavaScript:
+const rps = (p1, p2) => {
+  if(p1=="scissors" && p2== "paper" ||p1=="rock" && p2== "scissors" || p1=="paper" && p2== "rock"){
+    return"Player 1 won!"
+  }
+  else{
+    if(p1=="scissors" && p2== "rock" ||p1=="paper" && p2== "scissors" || p1=="rock" && p2== "paper"){
+      return "Player 2 won!"
+    }
+    else{
+      if(p1==p2){
+      return "Draw!"
+    }
+    }
+  }
+}
+
+// Convert a string to an arra
+function stringToArray(string){
+    return string.split(' ');
+}
+
+// Array plus array
+
+function arrayPlusArray(arr1, arr2) {
+  let sum=0;
+  for(let i=0;i<arr1.length;i++){
+    sum+=arr1[i]+arr2[i];
+  }
+  return sum;
+}
+
+// Total amount of points
+
+function points(games) {
+  let pointsx=0;
+  let pointsy=0;
+  for(let i=0;i<games.length;i++){
+   let arr= games[i].replace(":",'').split('');
+    if(arr[0]>arr[1]){
+      pointsx+=3;
+    }
+    else{
+      if(arr[0]<arr[1]){
+        pointsy+=3;
+      }
+      else{
+        if(arr[0]==arr[1]){
+          pointsx+=1;
+          pointsy+=1;
+        }
+      }
+    }
+  }
+ 
+  return pointsx
+}
+
+// Century From Year
+
+function century(year) {
+ 
+  return Math.ceil(year/100);
+}
+
+// Counting sheep...
+
+function countSheeps(sheep) {
+  let sum=0;
+  for(let i=0;i<sheep.length;i++){
+      if(sheep[i]==true){
+        sum++;
+      }
+  }
+  return sum;
+}
+
+// Grasshopper - Summation
+
+var summation = function (num) {
+  let sum=0;
+    for(let i=0;i<num;i++){
+       sum+=i+1;
+    }
+  return sum;
+}
+
+// Beginner - Lost Without a Map
+
+function maps(x){
+  let a=[];
+    for(let i=0;i<x.length;i++){
+      a.push(x[i]+x[i]);
+    }
+  return a;
+}
+
+// Remove String Spaces
+
+function noSpace(x){
+   let a=x.split(' ');
+  let str='';
+  for(let i=0;i<a.length;i++){
+     if(a[i]!=' '){
+       str+=a[i]
+     }
+  }
+  return str;
+}
+
+// String repeat
+
+function repeatStr (n, s) {
+  let str='';
+  for(let i=0;i<n;i++){
+    str+=s;
+  }
+  return str;
+}
+
+// Basic Mathematical Operations
+
+function basicOp(operation, value1, value2){
+  let val=`${value1}${operation}${value2}`;
+  return eval(val);
+}
+
+// Sum of positive
+
+function positiveSum(arr) {
+  let sum=0;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>0){
+      sum+=arr[i];
+    }
+  }
+  return sum;
+}
+
+// Remove First and Last Character
+
+function removeChar(str){
+   return str.slice(1,str.length-1)
+};
+
+
+
+
+// Get the mean of an array
+
+function getAverage(marks){
+  let total=marks.reduce((acumulator,value)=>{
+    return acumulator+value;
+  },0)
+  return Math.floor(total/marks.length);
+}
+
+// Find the smallest integer in the array
+
+function findSmallestInt(arr) {
+   
+  return Math.min(...arr);
+}
+
+// Return Negative
+
+function makeNegative(num) {
+ if(num>0){
+   return -num;
+   }
+  else{
+    if(num< 0){
+      return num;
+    }
+    else{
+      return num;
+    }
+  }
+}
+
+// Is n divisible by x and y?
+
+function isDivisible(n, x, y) {
+  if((n%x===0) && (n%y===0)){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+// Jenny's secret message
+
+function greet(name){
+  if(name === "Johnny")
+    return "Hello, my love!";
+    return "Hello, " + name + "!";
+}
+
+// Vowel Count
+
+function getCount(str) {
+  let count=0;
+  for(let i=0;i<str.length;i++){
+    if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'){
+      count++;
+    }
+  }
+  return count;
+}
+
+// Even or Odd
+
+function evenOrOdd(number) {
+   if(number%2==0){
+     return 'Even'
+   }
+  else{
+    return 'Odd'
+  }
+}
+
+// Reversed Strings
+
+function solution(str){
+  let name=str.split('');
+  let reverse=name.reverse();
+  let reversed=reverse.join('')
+  return reversed;
+}
+
+// Get Planet Name By ID
+
+
+function getPlanetName(id){
+  var name;
+  switch(id){
+    case 1:
+      name = 'Mercury'
+      break;
+    case 2:
+      name = 'Venus'
+       break;
+    case 3:
+      name = 'Earth'
+       break;
+    case 4:
+      name = 'Mars'
+       break;
+    case 5:
+      name = 'Jupiter'
+       break;
+    case 6:
+      name = 'Saturn'
+       break;
+    case 7:
+      name = 'Uranus'
+       break;
+    case 8:
+      name = 'Neptune'
+       break;
+  }
+  
+  return name;
+}
+
+// Multiply
+
+function multiply(a,b){
+  return a * b
+}
+
+    </script>
+</body>
+</html>
